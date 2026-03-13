@@ -1,4 +1,92 @@
-ion-toolbar {
-  --background: red !important;
+/* =====================================
+   MOODLE MOBILE CUSTOM CSS
+   Optimizado para Moodle App
+   ===================================== */
+
+/* ----- Colores institucionales para botones y enlaces ----- */
+:root {
+  --ion-color-primary: #003366; /* Azul institucional */
+  --ion-color-secondary: #f7941d; /* Naranja secundario */
+  --ion-font-family: "Roboto", Arial, sans-serif;
 }
 
+/* ----- Barra superior (solo se puede cambiar parcialmente con CSS) ----- */
+ion-toolbar {
+  --color: #ffffff; /* texto de la barra */
+}
+
+/* ----- Botones ----- */
+ion-button {
+  --background: var(--ion-color-secondary);
+  --border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 16px;
+}
+
+/* ----- Tarjetas de cursos ----- */
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 10px;
+  background: #ffffff;
+}
+
+/* ----- Lista de actividades ----- */
+.core-course-module-handler {
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* ----- Mejorar títulos ----- */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* ----- Espaciado general ----- */
+ion-content {
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
+
+/* ----- Enlaces ----- */
+a {
+  color: var(--ion-color-primary);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* ----- Ocultar elementos poco usados ----- */
+.core-mainmenu-help,
+.core-mainmenu-support {
+  display: none;
+}
+
+/* ----- Pantalla de login: logo y tamaño máximo ----- */
+.core-login-logo {
+  max-width: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ----- Scroll más suave ----- */
+* {
+  scroll-behavior: smooth;
+}
+
+/* ----- Ajustes para pantallas pequeñas ----- */
+@media (max-width: 600px) {
+
+  ion-card {
+    margin: 8px;
+  }
+
+  ion-button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  ion-content {
+    --padding-start: 8px;
+    --padding-end: 8px;
+  }
+}
